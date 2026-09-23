@@ -33,6 +33,12 @@ cp .env.example .env
 npm run dev
 ```
 
+## Deployment
+This is a monorepo — the client and server deploy to different platforms.
+
+- **Client (static site):** Deploy to Vercel/Netlify with root directory-aware config (see [vercel.json](vercel.json), which builds `client/` and serves `client/dist`). Set the env var `VITE_API_BASE_URL` to your deployed server's URL.
+- **Server (Express process):** Deploy to Render (see [render.yaml](render.yaml)), Railway, or Fly.io — it needs a persistent Node process, not a serverless function. Set `ANTHROPIC_API_KEY` and `FRONTEND_ORIGIN` (your deployed client URL) as platform secrets/env vars, never in code.
+
 ## API
 - `POST /api/analyze` — multipart upload, field name `receipt` (JPEG/PNG/WEBP/PDF, max 10MB). Rate-limited to 20 requests / 15 min. Returns extracted JSON directly; nothing is saved.
 

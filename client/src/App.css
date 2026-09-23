@@ -1,0 +1,185 @@
+:root {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-bg: #f8fafc;
+  --color-card: #ffffff;
+  --color-border: #e2e8f0;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-error: #dc2626;
+  --color-error-bg: #fef2f2;
+  --color-warning: #92400e;
+  --color-warning-bg: #fef3c7;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.app {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: system-ui, sans-serif;
+}
+
+.app h1 {
+  color: var(--color-primary-dark);
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--color-card);
+  border: 1px dashed var(--color-primary);
+  border-radius: 8px;
+}
+
+.upload-form button {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.upload-form button:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+}
+
+.upload-form button:disabled {
+  background: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: var(--color-error);
+  background: var(--color-error-bg);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+.file-name {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.receipt-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.confidence-warning {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.receipt-table th {
+  text-align: left;
+  padding: 0.4rem 0.6rem;
+  color: var(--color-text-muted);
+  width: 30%;
+}
+
+.receipt-table td {
+  padding: 0.4rem 0.6rem;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+}
+
+.line-items {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+}
+
+.line-items li {
+  color: var(--color-text);
+}
+
+.receipt-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.receipt-edit-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  gap: 0.25rem;
+  color: var(--color-text-muted);
+}
+
+.receipt-edit-form input,
+.receipt-edit-form select {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.4rem 0.5rem;
+  font-size: 1rem;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-actions button {
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.edit-actions button:first-child {
+  background: var(--color-primary);
+  color: white;
+}
+
+.edit-actions button:first-child:hover {
+  background: var(--color-primary-dark);
+}
+
+.edit-actions button:last-child {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
+.receipt-card > button {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.receipt-card > button:hover {
+  background: var(--color-primary-dark);
+}
